@@ -1,0 +1,21 @@
+<h1> ВЫЧИСЛЕНИЯ </h1>
+
+<form action = "http://localhost:8000/calculation" method = "GET">
+
+    <input type = "number" name = "a"> 
+    <select name = "operation">
+        <option value = "+"> + </option>
+        <option value = "-"> - </option>
+        <option value = "*"> * </option>
+        <option value = "/"> / </option>
+        <option value = "//"> // </option>
+        <option value = "**"> ** </option>
+
+    <input type = "number" name = "b">
+    <input type = "submit" value = "Find answer">
+
+</form>
+
+{% for i in summ%}
+    <p>{{i}}</p>
+{% endfor%}

@@ -1,0 +1,12 @@
+<h1> Hello, {{name}}! </h1>
+
+<form action = "http://localhost:8000/hello" method = "GET"> 
+
+    <input type = "text" name = "name"> 
+    <input type = "submit" value  = "Отправить"> 
+
+</form>
+
+{% for n in default_names %}
+    <p> Hello, {{n}} </p>
+{% endfor %}
