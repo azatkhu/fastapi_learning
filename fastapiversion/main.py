@@ -11,7 +11,7 @@ def read_root():
     return {"message": "API is working"}
 
 @app.get("/hello", response_class = HTMLResponse)
-def get_message_hello(name: str = None, request: Request = None):
+def get_message_hello(request: Request, name: str = "Гость"):
     return templates.TemplateResponse(
         request = request,
         name = "hello.html",
@@ -19,7 +19,7 @@ def get_message_hello(name: str = None, request: Request = None):
     )
 
 @app.get("/calculation", response_class=HTMLResponse)
-def get_sum(a: int|float = None, b: int|float = None, operation: str = None, request: Request = None):
+def get_sum(request: Request, a: int|float = None, b: int|float = None, operation: str = "+"):
     answers = []
     
     if a is not None and b is not None:
@@ -48,6 +48,11 @@ def get_sum(a: int|float = None, b: int|float = None, operation: str = None, req
     return templates.TemplateResponse(
         request = request,
         name = "calculation.html",
-        context = {"summ": answers}
+        context = {
+            "a": a,
+            "b": b,
+            "operation": operation,
+            "answers": answers,
+        },
     )
 
