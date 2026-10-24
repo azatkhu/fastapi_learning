@@ -5,12 +5,12 @@
     <input type = "number" name = "a" value = {{a}}> 
     <select name = "operation">
 
-        <option value = "+" selected> + </option>
-        <option value = "-" selected> - </option>
-        <option value = "*" selected> * </option>
-        <option value = "/" selected> / </option>
-        <option value = "//" selected> // </option>
-        <option value = "**" selected> ** </option>
+        <option value = "+" {{"selected" if selected == "+" else ""}}> + </option>
+        <option value = "-" {{"selected" if selected == "-" else ""}}> - </option>
+        <option value = "*" {{"seleced" if selected == "*" else ""}}> * </option>
+        <option value = "/" {{"selected" if selected == "/" else ""}}> / </option>
+        <option value = "//" {{"selected" if selected == "//" else "" }}> // </option>
+        <option value = "**" {{"selected" if selected == "**" else ""}}> ** </option>
     
     </select>
     <input type = "number" name = "b" value = {{b}}>

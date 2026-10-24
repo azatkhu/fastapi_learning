@@ -1,0 +1,19 @@
+<h1> Stats </h1>
+
+<table border = 1>
+    <tr> 
+        <th scope = "row"> name </th>
+        <th scope = "row"> 5 </th>
+        <th scope = "row"> 4 </th>
+        <th scope = "row"> 3 </th>
+    </tr>
+
+    {% for student in students%}
+
+    <tr>
+        <td> {{student.name}} </td>
+    </tr>
+
+    {%endfor%}
+
+</table>

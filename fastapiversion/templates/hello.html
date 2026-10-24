@@ -1,12 +1,5 @@
 <h1> Hello, {{name if name else "гость"}}! </h1>
 
-<form action = "http://localhost:8000/hello" method = "get"> 
-
-    <input type = "text" name = "name" value = {{name}}> 
-    <input type = "submit" value  = "Отправить"> 
-
-</form>
-
 {% for n in default_names %}
     <p> Hello, {{n}} </p>
-{% endfor %}
+{% endfor %} 

@@ -1,0 +1,24 @@
+<h1> All students </h1>
+
+<table border = 1> 
+    <tr>
+        <th scope = "col"> id </th>
+        <th scope = "col"> name </th>
+        <th scope = "col"> inf_score </th>
+        <th scope = "col"> math_score </th>
+        <th scope = "col"> history_score </th>
+    </tr> 
+
+    {%for student in students%}
+    
+    <tr> 
+        <td> {{student.id}} </td>
+        <td> <a href = "http://localhost:8000/student/{{student.id}}"> {{student.name}} </a> </td>
+        <td> {{student.inf_score}} </td>
+        <td> {{student.math_score}} </td>
+        <td> {{student.history_score}} </td>
+    </tr>
+
+    {%endfor%}
+
+</table>
