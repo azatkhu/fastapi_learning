@@ -11,7 +11,10 @@
     {% for student in students%}
 
     <tr>
-        <td> {{student.name}} </td>
+        <td> <a href = "http://localhost:8000/student/{{student.id}}"> {{student.name}} </a> </td>
+        <td> {{scores543list[loop.index0][0]}} </td>
+        <td> {{scores543list[loop.index0][1]}} </td>
+        <td> {{scores543list[loop.index0][2]}} </td>
     </tr>
 
     {%endfor%}
