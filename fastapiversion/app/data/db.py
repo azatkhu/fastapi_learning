@@ -1,6 +1,16 @@
-from data.model import Student
+#from app.data.model import Student
+from pydantic import BaseModel
 
 
+class Student(BaseModel):
+    
+    id: int
+    name: str
+    inf_score: int
+    math_score: int
+    history_score: int
+    
+    
 students = [
     Student(id = 1, name = "JOHN", inf_score = 80, math_score = 90, history_score = 95),
     Student(id = 2, name = "ALEX", inf_score = 90, math_score = 93, history_score = 87),

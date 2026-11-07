@@ -1,5 +1,5 @@
-from data.db import students
-from data.model import Student
+from app.data.db import students
+from app.data.model import Student
 
 
 def get_student_by_id(id: int) -> None|Student:
