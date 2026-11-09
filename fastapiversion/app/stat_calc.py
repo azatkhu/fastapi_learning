@@ -1,4 +1,4 @@
-from data.db import students
+from app.data.db import students
 
 
 def check_score(score, count5, count4, count3):
